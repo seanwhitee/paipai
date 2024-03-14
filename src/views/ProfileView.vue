@@ -16,6 +16,7 @@ const resourceLink = [
     icon: LinkedInIcon,
   },
 ];
+
 </script>
 <template>
   <Navbar />
@@ -25,16 +26,26 @@ const resourceLink = [
   <div class="h-full w-3/6 flex flex-col items-center justify-center m-auto">
     <div class="flex text-white mb-8">
       <img
+        v-motion
+        :initial="{
+          y: -1000,
+        }"
+        :enter="{
+          y: 0,
+          transition: {
+            delay: 500,
+          },
+        }"
         :src="ProfileImage"
         alt="Profile Image"
-        class="delay-1000 w-20 h-20 md:w-28 md:h-28 lg:w-28 lg:h-28 rounded-full shadow-2xl border-2 border-white me-10"
+        class="w-20 h-20 md:w-28 md:h-28 lg:w-28 lg:h-28 rounded-full shadow-2xl border-2 border-white me-10"
       />
 
       <h1
         class="flex justify-start flex-col text-3xl md:text-4xl lg:text-6xl font-light"
       >
         <span>Hsiang-Che </span>
-        <span class="text-blue-500 mb-4 animate-pulse">Pai</span>
+        <span class="text-blue-500 mb-4">Pai</span>
         <!-- small title -->
         <div class="w-full flex justify-start mb-5">
           <span class="text-white text-sm font-light">Developer.</span>
@@ -46,7 +57,7 @@ const resourceLink = [
             :key="link.name"
             :href="link.link"
             target="_blank"
-            class="flex items-center justify-center text-black font-bold text-2xl me-4 py-2 px-2 bg-white hover:bg-gray-500 transition duration-300 ease-in-out rounded-full"
+            class="animate-pulse flex items-center justify-center text-black font-bold text-2xl me-4 py-2 px-2 bg-white hover:bg-gray-500 transition duration-300 ease-in-out rounded-full"
           >
             <!--icon image-->
 
