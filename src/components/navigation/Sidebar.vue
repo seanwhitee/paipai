@@ -9,7 +9,7 @@ const items = ref([
   { name: "Project", icon: ProjectIcon, path: "/projects" },
 ]);
 
-const toggler = ref(true);
+const toggler = ref(false);
 const router = useRouter();
 
 const handleClick = (item) => {
@@ -25,42 +25,54 @@ const handleBarItemBackgroundColor = (item) => {
 };
 </script>
 <template>
+  <!-- Sidebar Toggler -->
   <img
     src="@/assets/icons/bars-3.svg"
     alt="bars"
     class="w-6 cursor-pointer fixed top-4 left-4 z-20 animate-pulse"
     @click="toggler = !toggler"
   />
-  <div class="fixed z-20 top-3.5 left-12 font-light text-xl text-gray-300 ">
+  <div class="fixed z-20 top-3.5 left-12 font-light text-xl text-gray-300">
     Pai
   </div>
-  <!-- Sidebar Container div-->
+
   <transition name="slide-fade">
-  <div v-if="toggler" class="h-full w-56 px-2 bg-zinc-800 fixed z-10">
-    <!-- Sidebar Toggler -->
-    
-    <ul
-      class="w-full h-full flex flex-col items-center justify-start pb-10 py-36"
+    <div
+      v-if="toggler"
+      class="flex items-center justify-center h-full w-56 px-2 bg-zinc-800 fixed z-10"
     >
-      <button
-        v-for="item in items"
-        :key="item.name"
-        class="mb-2 w-full hover:bg-gray-500 transition duration-300 ease-in-out rounded-3xl focus:outline-none"
-        :class="handleBarItemBackgroundColor(item)"
-        @click="handleClick(item)"
-      >
-        <BarItem :name="item.name" :icon="item.icon" />
-      </button>
-    </ul>
-  </div>
-</transition>
+      
+      <div class="bg-zinc-800 h-4/5 w-full">
+        <!--barItem container-->
+        <ul
+          class="w-full h-full flex flex-col items-center justify-start py-2 overflow-y-scroll mb-6"
+        >
+          <button
+            v-for="item in items"
+            :key="item.name"
+            class="mb-2 w-full hover:bg-gray-500 transition duration-300 ease-in-out rounded-3xl focus:outline-none"
+            :class="handleBarItemBackgroundColor(item)"
+            @click="handleClick(item)"
+          >
+            <BarItem :name="item.name" :icon="item.icon" />
+          </button>
+        </ul>
+        <!--barItem container end-->
+        <a href="mailto:blackseanx@gmail.com" class="cursor-pointer bg-white flex items-center justify-center py-2 rounded-3xl text-black font-light w-full hover:bg-gray-500/50 hover:text-white transition duration-300 ease-in-out focus:outline-none">Contact me</a>
+      </div>
+      
+
+    </div>
+  </transition>
 </template>
 
 <style scoped>
-.slide-fade-enter-active, .slide-fade-leave-active {
-  transition: all .3s ease;
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
 }
-.slide-fade-enter, .slide-fade-leave-to {
+.slide-fade-enter,
+.slide-fade-leave-to {
   transform: translateX(-100%);
   opacity: 0;
 }
