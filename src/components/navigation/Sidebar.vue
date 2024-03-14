@@ -28,15 +28,15 @@ const handleBarItemBackgroundColor = (item) => {
   <img
     src="@/assets/icons/bars-3.svg"
     alt="bars"
-    class="w-6 cursor-pointer fixed top-4 left-4 z-10"
+    class="w-6 cursor-pointer fixed top-4 left-4 z-20 animate-pulse"
     @click="toggler = !toggler"
   />
-  <div class="fixed z-10 top-3.5 left-12 font-light text-xl text-gray-300 ">
+  <div class="fixed z-20 top-3.5 left-12 font-light text-xl text-gray-300 ">
     Pai
   </div>
   <!-- Sidebar Container div-->
   <transition name="slide-fade">
-  <div v-if="toggler" class="h-full w-56 px-2 bg-zinc-800 fixed z-0">
+  <div v-if="toggler" class="h-full w-56 px-2 bg-zinc-800 fixed z-10">
     <!-- Sidebar Toggler -->
     
     <ul
