@@ -2,7 +2,6 @@
 
 My portfolio [website](https://www.withpaipai.com).
 
-
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).

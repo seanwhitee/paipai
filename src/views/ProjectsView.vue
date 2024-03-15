@@ -26,6 +26,6 @@ fetchProjectsData();
   <div
     class=" pt-24 pb-14 h-full overflow-scroll w-4/6 m-auto flex flex-col items-center justify-start"
   >
-    <ProjectCard v-for="repo in repos" :key="repo.id" :repoTitle="repo.name" :repoDescription="repo.description" :repoLink="repo.html_url" />
+    <ProjectCard v-for="repo in repos" :key="repo.id" :programmingLanguage="repo.language" :repoTitle="repo.name" :repoDescription="repo.description" :repoLink="repo.html_url" />
   </div>
 </template>
