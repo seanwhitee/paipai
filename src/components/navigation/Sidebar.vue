@@ -29,10 +29,10 @@ const handleBarItemBackgroundColor = (item) => {
   <img
     src="@/assets/icons/bars-3.svg"
     alt="bars"
-    class="w-6 cursor-pointer fixed top-4 left-4 z-20 animate-pulse"
+    class="w-6 cursor-pointer fixed top-4 left-5 z-20 animate-pulse"
     @click="toggler = !toggler"
   />
-  <div class="fixed z-20 top-3.5 left-12 font-light text-xl text-gray-300">
+  <div @click="handleClick({path: '/'})" class="cursor-pointer fixed z-20 top-3.5 left-14 font-light text-xl text-gray-300">
     Pai
   </div>
 
