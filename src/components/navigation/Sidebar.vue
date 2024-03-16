@@ -9,7 +9,7 @@ const items = ref([
   { name: "Project", icon: ProjectIcon, path: "/projects" },
 ]);
 
-const toggler = ref(false);
+const toggler = ref(true);
 const router = useRouter();
 
 const handleClick = (item) => {
