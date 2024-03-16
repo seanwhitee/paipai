@@ -32,7 +32,10 @@ const handleBarItemBackgroundColor = (item) => {
     class="w-6 cursor-pointer fixed top-4 left-5 z-20 animate-pulse"
     @click="toggler = !toggler"
   />
-  <div @click="handleClick({path: '/'})" class="cursor-pointer fixed z-20 top-3.5 left-14 font-light text-xl text-gray-300">
+  <div
+    @click="handleClick({ path: '/' })"
+    class="cursor-pointer fixed z-20 top-3.5 left-14 font-light text-xl text-gray-300"
+  >
     Pai
   </div>
 
@@ -41,7 +44,6 @@ const handleBarItemBackgroundColor = (item) => {
       v-if="toggler"
       class="flex items-center justify-center h-full w-56 px-2 bg-zinc-800 fixed z-10"
     >
-      
       <div class="bg-zinc-800 h-4/5 w-full">
         <!--barItem container-->
         <ul
@@ -58,10 +60,12 @@ const handleBarItemBackgroundColor = (item) => {
           </button>
         </ul>
         <!--barItem container end-->
-        <a href="mailto:blackseanx@gmail.com" class="cursor-pointer bg-white flex items-center justify-center py-2 rounded-3xl text-black font-light w-full hover:bg-gray-500/50 hover:text-white transition duration-300 ease-in-out focus:outline-none">Contact me</a>
+        <a
+          href="mailto:blackseanx@gmail.com"
+          class="cursor-pointer bg-white flex items-center justify-center py-2 rounded-3xl text-black font-light w-full hover:bg-gray-500/50 hover:text-white transition duration-300 ease-in-out focus:outline-none"
+          >Contact me</a
+        >
       </div>
-      
-
     </div>
   </transition>
 </template>
