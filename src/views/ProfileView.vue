@@ -23,7 +23,7 @@ const resourceLink = [
   <Sidebar />
 
   <!-- profile container div-->
-  <div class="h-full flex flex-col items-center justify-center m-auto py-32">
+  <div class="flex flex-col items-center justify-center m-auto pt-60">
     <div class="flex items-start text-white mb-8">
       <img
         v-motion
