@@ -23,7 +23,7 @@ const resourceLink = [
   <Sidebar />
 
   <!-- profile container div-->
-  <div class="flex flex-col items-center justify-center m-auto pt-60">
+  <div class="flex flex-col items-center justify-center m-x-auto mt-40">
     <div class="flex items-start text-white mb-8">
       <img
         v-motion
@@ -67,7 +67,9 @@ const resourceLink = [
       </div>
     </div>
 
-    <div class="mt-10 text-black w-full text-sm flex justify-center items-center">
+    
+  </div>
+  <div class="mt-10 text-black w-full text-sm flex justify-center items-center">
       <button
         class="flex bg-white items-center justify-center hover:bg-white/80 rounded-xl py-2 px-3 transition duration-300 ease-in-out"
         @click="() => router.push('/projects')"
@@ -80,5 +82,4 @@ const resourceLink = [
         />
       </button>
     </div>
-  </div>
 </template>
