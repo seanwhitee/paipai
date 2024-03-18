@@ -13,7 +13,7 @@ const handleClicked = (link) => {
 </script>
 <template>
   <div
-    class="bg-black border-l-2 border-b-2 border-zinc-800 w-full hover:border-white hover:border-l-4 hover:border-b-4 transition duration-500 ease-in-out cursor-pointer shadow-lg flex flex-col items-start justify-start rounded-lg py-3 px-4 mb-4 text-white"
+    class="border-l-2 border-b-2 border-zinc-800 w-full hover:border-white hover:border-l-4 hover:border-b-4 transition duration-500 ease-in-out cursor-pointer shadow-lg flex flex-col items-start justify-start rounded-lg py-3 px-4 mb-4 text-white"
     @click="handleClicked(repoLink)">
     <span class="text-lg font-bold mb-1">{{ repoTitle }}</span>
 

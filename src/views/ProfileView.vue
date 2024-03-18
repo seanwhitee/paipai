@@ -4,6 +4,7 @@ import GithubIcon from "@/assets/icons/github.png";
 import LinkedInIcon from "@/assets/icons/linkedin.png";
 import ProfileImage from "@/assets/image/profile-photo.png";
 import Navbar from "@/components/navigation/Navbar.vue";
+import router from "@/router";
 const resourceLink = [
   {
     name: "Github",
@@ -16,15 +17,14 @@ const resourceLink = [
     icon: LinkedInIcon,
   },
 ];
-
 </script>
 <template>
   <Navbar />
   <Sidebar />
 
   <!-- profile container div-->
-  <div class="h-full w-3/6 flex flex-col items-center justify-center m-auto">
-    <div class="flex text-white mb-8">
+  <div class="h-full flex flex-col items-center justify-center m-auto py-32">
+    <div class="flex items-start text-white mb-8">
       <img
         v-motion
         :initial="{
@@ -38,10 +38,10 @@ const resourceLink = [
         }"
         :src="ProfileImage"
         alt="Profile Image"
-        class="w-20 h-20 md:w-28 md:h-28 lg:w-28 lg:h-28 rounded-full shadow-2xl border-2 border-white me-10"
+        class="-z-10 w-20 h-20 md:w-28 md:h-28 lg:w-28 lg:h-28 rounded-full shadow-2xl border-2 border-white me-10"
       />
 
-      <h1
+      <div
         class="flex justify-start flex-col text-3xl md:text-4xl lg:text-6xl font-light"
       >
         <span>Hsiang-Che </span>
@@ -64,7 +64,21 @@ const resourceLink = [
             <img :src="link.icon" :alt="link.name" class="w-5" />
           </a>
         </div>
-      </h1>
+      </div>
+    </div>
+
+    <div class="mt-10 text-black w-full text-sm flex justify-center items-center">
+      <button
+        class="flex bg-white items-center justify-center hover:bg-white/80 rounded-xl py-2 px-3 transition duration-300 ease-in-out"
+        @click="() => router.push('/projects')"
+      >
+        <span class="me-2">SEE MY PROJECTS HERE</span>
+        <img
+          src="@/assets/icons/arrow-long-right.svg"
+          alt="arrow-right"
+          class="w-5"
+        />
+      </button>
     </div>
   </div>
 </template>

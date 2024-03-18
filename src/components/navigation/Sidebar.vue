@@ -44,7 +44,7 @@ const handleBarItemBackgroundColor = (item) => {
       v-if="toggler"
       class="flex items-center justify-center h-full w-56 px-2 bg-zinc-800 fixed z-10"
     >
-      <div class="bg-zinc-800 h-4/5 w-full">
+      <div class="bg-zinc-800 h-4/5 w-full pb-2">
         <!--barItem container-->
         <ul
           class="w-full h-full flex flex-col items-center justify-start py-2 overflow-y-scroll mb-6"
