@@ -42,17 +42,21 @@ const handleBarItemBackgroundColor = (item) => {
   <transition name="slide-fade">
     <div
       v-if="toggler"
-      class="top-0 left-0 flex items-center justify-center h-full w-56 px-2 bg-zinc-800 fixed z-10"
+      class="top-0 left-0 flex flex-col items-center justify-center h-full w-56 px-2 bg-zinc-800 fixed z-10 
+      overflow-y-scroll"
     >
-      <div class="bg-zinc-800 h-4/5 w-full pb-2">
+      <div
+        class="w-56 h-14 bg-zinc-800 border-b-2 border-gray-500/50 fixed top-0 left-0"
+      ></div>
+      <div class="bg-zinc-800 h-4/5 w-full pt-10 pb-2">
         <!--barItem container-->
         <ul
-          class="w-full h-full flex flex-col items-center justify-start py-2 overflow-y-scroll mb-6"
+          class="w-full h-full flex flex-col items-center justify-start pb-2 overflow-y-scroll mb-6"
         >
           <button
             v-for="item in items"
             :key="item.name"
-            class="mb-2 w-full hover:bg-gray-500 transition duration-300 ease-in-out rounded-3xl focus:outline-none"
+            class="mb-2 w-full hover:bg-gray-500 transition duration-300 ease-in-out rounded-lg focus:outline-none"
             :class="handleBarItemBackgroundColor(item)"
             @click="handleClick(item)"
           >
@@ -60,11 +64,17 @@ const handleBarItemBackgroundColor = (item) => {
           </button>
         </ul>
         <!--barItem container end-->
-        <a
-          href="mailto:blackseanx@gmail.com"
-          class="cursor-pointer bg-white flex items-center justify-center py-2 rounded-3xl text-black font-light w-full hover:bg-gray-500/50 hover:text-white transition duration-300 ease-in-out focus:outline-none"
-          >Contact me</a
+        <div
+          class="flex items-center justify-center px-1 w-56 h-14 border-t border-t-gray-500/50 fixed
+          bottom-0 left-0"
         >
+          <a
+            href="mailto:blackseanx@gmail.com"
+            class="cursor-pointer bg-white flex items-center justify-center py-2 rounded-xl text-black font-light
+            w-full hover:bg-gray-500/50 hover:text-white transition duration-300 ease-in-out focus:outline-none"
+            >Contact me</a
+          >
+        </div>
       </div>
     </div>
   </transition>
@@ -75,6 +85,7 @@ const handleBarItemBackgroundColor = (item) => {
 .slide-fade-leave-active {
   transition: all 0.3s ease;
 }
+
 .slide-fade-enter,
 .slide-fade-leave-to {
   transform: translateX(-100%);
