@@ -21,10 +21,9 @@ const resourceLink = [
 <template>
   <Navbar />
   <Sidebar />
-
-  <!-- profile container div-->
   <div class="flex flex-col items-center justify-center m-x-auto mt-40">
-    <div class="flex items-start text-white mb-8">
+    <!-- profile container div-->
+    <div class="flex items-start justify-start text-white mb-8 gap-10 w-3/5">
       <img
         v-motion
         :initial="{
@@ -44,7 +43,7 @@ const resourceLink = [
       <div
         class="flex justify-start flex-col text-3xl md:text-4xl lg:text-6xl font-light"
       >
-        <span>Hsiang-Che </span>
+        <span>Sean </span>
         <span class="text-blue-500 mb-4">Pai</span>
         <!-- small title -->
         <div class="w-full flex justify-start mb-5">
@@ -67,11 +66,11 @@ const resourceLink = [
       </div>
     </div>
 
-    
-  </div>
-  <div class="mt-10 text-black w-full text-sm flex justify-center items-center">
+    <div
+      class="mt-10 mb-20 text-black w-3/5 text-sm flex justify-start items-center"
+    >
       <button
-        class="flex bg-white items-center justify-center hover:bg-white/80 rounded-xl py-2 px-3 transition duration-300 ease-in-out"
+        class="flex bg-white items-center justify-center hover:bg-white/80 rounded-xl py-2 px-4 transition duration-300 ease-in-out"
         @click="() => router.push('/projects')"
       >
         <span class="me-2">SEE MY PROJECTS HERE</span>
@@ -82,4 +81,20 @@ const resourceLink = [
         />
       </button>
     </div>
+    <div class="text-white flex items-start w-3/5 m-auto">
+      <div class="me-10">About</div>
+      <div class="flex flex-col gap-6 w-4/5">
+        <p>Hello World!</p>
+        <p>I'm Sean, an engineer with a design obsession.</p>
+        <p>
+          I have passion about design,and constantly on the hunt for innovative
+          ways to fuse design thinking into the engineering process.
+        </p>
+        <p>
+          This website showcases some of the things I've created. Explore my
+          work and let's connect!
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
