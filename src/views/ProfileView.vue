@@ -21,7 +21,7 @@ const resourceLink = [
 <template>
   <Navbar />
   <Sidebar />
-  <div class="flex flex-col items-center justify-center m-x-auto mt-40">
+  <div class="flex flex-col items-center justify-center m-x-auto mt-40 pb-20">
     <!-- profile container div-->
     <div class="flex items-start justify-start text-white mb-8 gap-10 w-3/5">
       <img

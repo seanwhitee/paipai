@@ -22,9 +22,9 @@ const handleBarItemBackgroundColor = (item) => {
 </script>
 <template>
   <nav
-    class="hidden md:block lg:block fixed top-0 z-0 bg-black w-full h-14 border-b-2 border-gray-500/50"
+    class="fixed top-0 z-0 bg-black w-full h-14 border-b-2 border-gray-500/50"
   >
-    <div class="flex items-center justify-end pe-20 h-full w-full">
+    <div class="hidden md:flex lg:flex items-center justify-end pe-20 h-full w-full">
       <div
         class="me-4 cursor-pointer hover:text-white duration-300 ease-in-out"
         v-for="item in items"
