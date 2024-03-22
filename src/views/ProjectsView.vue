@@ -9,7 +9,9 @@ const fetchProjectsData = async () => {
   await fetch("https://api.github.com/users/seanwhitee/repos", {
     method: "GET",
     headers: {
-      "Content-Type": "application/json",
+      'X-GitHub-Api-Version': '2022-11-28',
+      "User-Agent": "seanwhitee",
+      "accept": "application/vnd.github.v3+json",
     },
   })
     .then((response) => response.json())
