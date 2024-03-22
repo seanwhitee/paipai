@@ -67,7 +67,7 @@ const resourceLink = [
           <span class="text-white text-sm font-light">Developer.</span>
         </div>
         <!-- Resource Link -->
-        <div class="flex justify-start w-full items-center">
+        <div class="-z-10 flex justify-start w-full items-center">
           <a
             v-for="link in resourceLink"
             :key="link.name"
