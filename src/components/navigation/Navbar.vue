@@ -22,7 +22,7 @@ const handleBarItemBackgroundColor = (item) => {
 </script>
 <template>
   <nav
-    class="fixed top-0 z-0 bg-black w-full h-14 border-b-2 border-gray-500/50"
+    class="fixed top-0 z-10 bg-black w-full h-14 border-b-2 border-gray-500/50"
   >
     <div class="hidden md:flex lg:flex items-center justify-end pe-20 h-full w-full">
       <div

@@ -18,7 +18,7 @@ const handleClicked = (link) => {
     <span class="text-lg font-bold mb-1">{{ repoTitle }}</span>
 
     <!--language tag-->
-    <div class="w-full overflow-x-scroll px-1 mb-4 flex items-center justify-start">
+    <div class="w-full px-1 mb-4 flex items-center justify-start">
       <Tag :tagName="programmingLanguage"/>
       
     </div>
