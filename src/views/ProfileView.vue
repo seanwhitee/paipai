@@ -52,13 +52,13 @@ const resourceLink = [
           <span class="text-white text-sm font-light">Developer.</span>
         </div>
         <!-- Resource Link -->
-        <div class="-z-10 flex justify-start w-full items-center">
+        <div class="flex justify-start w-full items-center">
           <a
             v-for="link in resourceLink"
             :key="link.name"
             :href="link.link"
             target="_blank"
-            class="animate-pulse flex items-center justify-center text-black font-bold text-2xl me-4 py-2 px-2 bg-white hover:bg-gray-500 transition duration-300 ease-in-out rounded-full"
+            class="flex items-center justify-center text-black font-bold text-2xl me-4 py-2 px-2 bg-white hover:bg-gray-500 transition duration-300 ease-in-out rounded-full"
           >
             <!--icon image-->
 
