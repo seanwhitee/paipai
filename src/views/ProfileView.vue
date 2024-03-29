@@ -58,7 +58,7 @@ const resourceLink = [
             :key="link.name"
             :href="link.link"
             target="_blank"
-            class="flex items-center justify-center text-black font-bold text-2xl me-4 py-2 px-2 bg-white hover:bg-gray-500 transition duration-300 ease-in-out rounded-full"
+            class="flex animate-pulse items-center justify-center text-black font-bold text-2xl me-4 py-2 px-2 bg-white hover:bg-gray-500 transition duration-300 ease-in-out rounded-full"
           >
             <!--icon image-->
 
