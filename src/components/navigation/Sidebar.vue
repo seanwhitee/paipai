@@ -42,13 +42,13 @@ const handleBarItemBackgroundColor = (item) => {
   <transition name="slide-fade">
     <div
       v-if="toggler"
-      class="top-0 left-0 flex flex-col items-center justify-center h-full w-56 px-2 bg-zinc-800 fixed z-10 
+      class="top-0 left-0 flex flex-col items-center justify-center border-r border-gray-500/50 h-full w-56 px-2 bg-black fixed z-10 
       overflow-y-scroll md:hidden lg:hidden"
     >
       <div
-        class="w-56 h-14 bg-zinc-800 border-b-2 border-gray-500/50 fixed top-0 left-0"
+        class="w-56 h-14 border-b border-gray-500/50 fixed top-0 left-0"
       ></div>
-      <div class="bg-zinc-800 h-4/5 w-full pt-10 pb-2">
+      <div class="h-4/5 w-full pt-10 pb-2">
         <!--barItem container-->
         <ul
           class="w-full h-full flex flex-col items-center justify-start pb-2 overflow-y-scroll mb-6"
