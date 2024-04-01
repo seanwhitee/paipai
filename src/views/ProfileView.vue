@@ -91,7 +91,7 @@ const resourceLink = [
       <div class="me-10">About</div>
       <div class="flex flex-col gap-6 w-4/5">
         <p>Hello World!</p>
-        <p>I'm Sean, an engineer with a design obsession.</p>
+        <p>I'm Sean, a developer with a design obsession.</p>
         <p>
           I have passion about design,and constantly on the hunt for innovative
           ways to fuse design thinking into the engineering process.
